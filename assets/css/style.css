@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* left_part */
 #left_part {
   display: flex;
@@ -57,5 +61,44 @@
 
       #find_chat input {
         border: 0;
-        overflow-x: visible;
+        text-overflow: ellipsis;
       }
+
+    /* chat_list */
+    #chat_list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+      .chat > a{
+        display: flex;
+        width: 100%;
+      }
+
+        .contact_img img{
+          border-radius: 50%;
+          width: 50px;
+        }
+
+        .data_chat {
+          display: flex;
+          flex-direction: column;
+          width: 75%;
+          margin-left: 5%;
+        }
+
+          .name_time_contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .preview_msg {
+            width: 75%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 20px;
+          }
