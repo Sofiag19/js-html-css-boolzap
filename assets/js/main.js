@@ -29,6 +29,19 @@ $(document).ready(function(){
   //
 
   // inviomsg con invio - "13"
+  $(".message").on('keypress',function(e) {
+    if(e.which == 13) {
+      var messaggio = $(".message").val();
+
+      var elmentmsg = $("#template .msgsent").clone();
+
+      elmentmsg.find(".testo").text(messaggio);
+
+      $("#now_chat").append(elmentmsg);
+
+      $(".message").val("");
+    }
+});
 
 
 });
