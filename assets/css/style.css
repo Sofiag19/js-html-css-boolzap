@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, "Fira Sans", sans-serif;
+  font-weight: lighter;
 }
 
 a {
@@ -76,6 +77,11 @@ a {
         width: 80%;
       }
 
+      #find_chat input:focus {
+        outline-color: transparent;
+        outline-style: none;
+      }
+
     /* chat_list */
     #chat_list {
       width: 100%;
@@ -100,7 +106,7 @@ a {
         .data_chat {
           display: flex;
           flex-direction: column;
-          width: 75%;
+          width: 90%;
           margin-left: 4%;
         }
 
@@ -110,11 +116,26 @@ a {
             align-items: center;
           }
 
+          .name_time_contact h5 {
+            font-size: 17px;
+            font-weight: normal;
+            color: #262626;
+          }
+
+          .name_time_contact p {
+            color: rgba(0,0,0,.4);
+            font-size: 12px;
+          }
+
+
+
           .preview_msg {
             width: 75%;
             overflow: hidden;
             text-overflow: ellipsis;
             height: 20px;
+            color: rgba(0,0,0,.6);
+            font-size: 14px;
           }
 
   /* main */
@@ -140,6 +161,7 @@ a {
 
       #info_contact {
         display: flex;
+        align-items: center;
         width: 60%;
       }
         #info_contact div {
@@ -158,6 +180,17 @@ a {
 
       #tools_this_chat div {
         margin-left: 10%;
+      }
+
+      #contact_now h2 {
+        font-size: 17px;
+        font-weight: normal;
+        color: #262626;
+      }
+
+      #contact_now p {
+        color: rgba(0,0,0,.6);
+        font-size: 14px;
       }
 
     /* now_chat */
@@ -188,6 +221,11 @@ a {
         border: 0;
         padding: 15px 10px;
         border-radius: 60px;
+      }
+
+      #user_chat input:focus {
+        outline-color: transparent;
+        outline-style: none;
       }
 
   /* template */

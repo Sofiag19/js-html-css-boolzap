@@ -13,15 +13,18 @@ $(document).ready(function(){
   $(".message").val("");
 
 
-  $("#user_chat input").
-  // on focus
-
   $(".chat").click(function(){
-    
-    $(this).css("background-color", rgb(248, 248, 248));
-    $(this).siblings(".chat").css("background-color", white);
+
+    $(this).css("background-color", "grey");
+    // $(this).siblings().css("background-color", "white");
 
   })
+
+  // $("#user_chat .message").click(function(){
+  //   $(this).blur();
+  // });
+
+
 
 
 
