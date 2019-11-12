@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -78,8 +82,10 @@ a {
       display: flex;
       flex-direction: column;
       overflow-y: auto;
-      padding: 10px;
     }
+      .chat {
+        padding: 8px 10px;
+      }
 
       .chat > a{
         display: flex;
@@ -95,7 +101,7 @@ a {
           display: flex;
           flex-direction: column;
           width: 75%;
-          margin-left: 5%;
+          margin-left: 4%;
         }
 
           .name_time_contact {
@@ -160,7 +166,7 @@ a {
       height: calc(100vh - 120px);
       background-color: rgb(229, 221, 213);
       background-image: url("../img/sfondodefault.png");
-      overflow: hidden;
+      overflow: auto;
     }
 
     /* user_chat */
@@ -183,3 +189,30 @@ a {
         padding: 15px 10px;
         border-radius: 60px;
       }
+
+  /* template */
+  .msgsent::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .data_chat_now {
+    float: right;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(220, 248, 198);
+    text-align: right;
+  }
+
+  .testo {
+    color: #262626;
+  }
+
+  .time {
+    font-size: 11px;
+    color: rgba(0,0,0,.45);
+    line-height: 15px;
+  }
