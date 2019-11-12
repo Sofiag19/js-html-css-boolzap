@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-  // invio mess
-  $(".sendmsg").click(function(){
-
+  // funzione per invio mess
+  function inviaMess() {
     var messaggio = $(".message").val();
 
     var elmentmsg = $("#template .msgsent").clone();
@@ -12,7 +11,18 @@ $(document).ready(function(){
     $("#now_chat").append(elmentmsg);
 
     $(".message").val("");
+  }
+  
+  // invio mess
+  $(".sendmsg").click(function(){
+    inviaMess();
+  });
 
+  // inviomsg con invio - "13"
+  $(".message").on('keypress',function(e) {
+    if(e.which == 13) {
+      inviaMess();
+    }
   });
 
   // al click e al passaggio la chat cambia colore
@@ -26,22 +36,9 @@ $(document).ready(function(){
       $(this).siblings().removeClass("lightgrey");
     }
   });
-  //
 
-  // inviomsg con invio - "13"
-  $(".message").on('keypress',function(e) {
-    if(e.which == 13) {
-      var messaggio = $(".message").val();
+  // input find da modificare al click
 
-      var elmentmsg = $("#template .msgsent").clone();
-
-      elmentmsg.find(".testo").text(messaggio);
-
-      $("#now_chat").append(elmentmsg);
-
-      $(".message").val("");
-    }
-});
 
 
 });
