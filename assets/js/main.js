@@ -44,12 +44,31 @@ $(document).ready(function(){
   //   $(freccia).show;
   // })
 
-  // modificare send con mex vocale
+  $("#find_chat div").click(function(){
+    $(this).children("#cerca").removeAttr("placeholder");
+    $(this).children("#lente").hide();
+    $(this).children("#return").show();
+  })
+
+  // $("#return").click(function(){
+  //   $(this).hide();
+  //   $(this).siblings("#cerca").attr("placeholder","Cerca o inizia una nuova chat");
+  //   $(this).siblings("#lente").show();
+  // })
+
+  // -=====modificare send con mex vocale=========
   // if(input value == 0) {
   //   $(send).hide();
   // } else {
   //   $(mexvocale).hide()
   // }
+    // $("#writing").click(function(){
+    //   var valueWriting = $("#writing:text").attr("text");
+    //   if (valueWriting > 0) {
+    //     $("#invia").show();
+    //     $("#mexvocale").hide();
+    //   }
+    // })
 
   // hover su msgsent e msgreceived appare freccina
   // $(msgsent).hover(function(){

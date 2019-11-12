@@ -107,14 +107,21 @@ a {
         background-color: white;
         padding: 5px 20px;
         border-radius: 60px;
+        height: 37px;
       }
 
-      #find_chat button {
+      #lente {
         border: 0;
         background-color: white;
       }
 
-      #find_chat input {
+      #return {
+        display: none;
+        border: 0;
+        background-color: white;
+      }
+
+      #cerca {
         border: 0;
         text-overflow: ellipsis;
         width: 80%;
@@ -249,6 +256,10 @@ a {
         border: 0;
         padding: 15px 10px;
         border-radius: 60px;
+      }
+
+      #invia {
+        display: none;
       }
 
   /* template */
