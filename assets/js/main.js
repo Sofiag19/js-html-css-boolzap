@@ -15,13 +15,20 @@ $(document).ready(function(){
 
   });
 
-  // al click il div cambia colore
-  $(".chat").click(function(){
-    $(this).addClass("grey");
-    $(this).siblings().removeClass("grey");
-  })
+  // al click e al passaggio la chat cambia colore
+  $(".chat").on({
+    click: function() {
+      $(this).addClass("grey");
+      $(this).siblings().removeClass("grey");
+    },
+    mouseover: function(){
+      $(this).not(".grey").addClass("lightgrey");
+      $(this).siblings().removeClass("lightgrey");
+    }
+  });
+  //
 
   // inviomsg con invio - "13"
-  
+
 
 });
