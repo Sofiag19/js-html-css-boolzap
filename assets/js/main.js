@@ -16,7 +16,12 @@ $(document).ready(function(){
   });
 
   // al click il div cambia colore
+  $(".chat").click(function(){
+    $(this).addClass("grey");
+    $(this).siblings().removeClass("grey");
+  })
 
-  // invio con invio
+  // inviomsg con invio
+
 
 });

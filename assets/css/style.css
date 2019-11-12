@@ -18,11 +18,12 @@ a {
 #left_part {
   display: flex;
   flex-direction: column;
-  width: 40%; /* DEBUG:  */
+  width: 35%; /* DEBUG:  */
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  border-right: 1px solid rgb(224, 224, 224);
 }
 
   /* user_tools */
@@ -50,6 +51,41 @@ a {
       #tools a{
         margin-left: 10%;
       }
+
+    /* notifiche */
+    #notification {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      background-color: rgb(118, 220, 255);
+      padding: 10px;
+    }
+
+    #bell {
+      background-color: white;
+      padding: 10px;
+      border-radius: 50%;
+      margin-right: 5%;
+      color: rgb(118, 220, 255);
+    }
+
+    #notification div:last-of-type {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #notification div:last-of-type h6 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #262626;
+    }
+
+    #notification div:last-of-type a {
+      color: rgba(0,0,0,.6);
+      font-size: 14px;
+      text-decoration: underline;
+    }
 
     /* find_chat */
     #find_chat {
@@ -82,6 +118,7 @@ a {
         outline-style: none;
       }
 
+
     /* chat_list */
     #chat_list {
       width: 100%;
@@ -91,6 +128,10 @@ a {
     }
       .chat {
         padding: 8px 10px;
+      }
+
+      .grey {
+        background-color: rgb(238, 238, 238);
       }
 
       .chat > a{
@@ -140,7 +181,7 @@ a {
 
   /* main */
   main {
-    width: 60%;/* DEBUG:  */
+    width: 65%;/* DEBUG:  */
     position: fixed;
     top: 0;
     right: 0;
@@ -168,7 +209,7 @@ a {
           margin-right: 5%;
         }
         #info_contact div img {
-          width: 50px;
+          width: 40px;
           border-radius: 50%;
         }
 
@@ -204,7 +245,7 @@ a {
 
     /* user_chat */
     #user_chat {
-      width: 60%;
+      width: 65%;
       height: 60px;
       position: fixed;
       bottom: 0;
@@ -235,7 +276,7 @@ a {
     clear: both;
   }
 
-  .data_chat_now {
+  .data_chat_now_sent {
     float: right;
     display: inline-block;
     border-radius: 8px;
@@ -245,6 +286,21 @@ a {
     text-align: right;
   }
 
+  .msgreceived::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .data_chat_now_received {
+    float: left;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+  }
+
   .testo {
     color: #262626;
   }
@@ -252,5 +308,4 @@ a {
   .time {
     font-size: 11px;
     color: rgba(0,0,0,.45);
-    line-height: 15px;
   }
