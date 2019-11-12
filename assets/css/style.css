@@ -14,11 +14,32 @@ a {
   text-decoration: none;
 }
 
+.flex {
+  display: flex;
+}
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fl_col {
+  flex-direction: column;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+.nofocus:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
 /* left_part */
 #left_part {
-  display: flex;
-  flex-direction: column;
-  width: 35%; /* DEBUG:  */
+  width: 35%;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -28,11 +49,9 @@ a {
 
   /* user_tools */
   #user_tools {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(238, 238, 238);
-    padding: 10px;
     width: 100%;
     height: 60px;
   }
@@ -43,7 +62,6 @@ a {
     }
 
     #tools {
-      display: flex;
       justify-content: flex-end;
       width: 50%;
     }
@@ -54,25 +72,17 @@ a {
 
     /* notifiche */
     #notification {
-      display: flex;
       justify-content: flex-start;
       align-items: center;
       width: 100%;
       background-color: rgb(118, 220, 255);
-      padding: 10px;
     }
 
     #bell {
       background-color: white;
-      padding: 10px;
       border-radius: 50%;
       margin-right: 5%;
       color: rgb(118, 220, 255);
-    }
-
-    #notification div:last-of-type {
-      display: flex;
-      flex-direction: column;
     }
 
     #notification div:last-of-type h6 {
@@ -91,15 +101,12 @@ a {
     #find_chat {
       width: 100%;
       background-color: rgb(248, 248, 248);
-      padding: 10px;
     }
 
       #find_chat div {
-        /* width: 100%; */
         background-color: white;
         padding: 5px 20px;
         border-radius: 60px;
-        display: flex;
       }
 
       #find_chat button {
@@ -113,29 +120,17 @@ a {
         width: 80%;
       }
 
-      #find_chat input:focus {
-        outline-color: transparent;
-        outline-style: none;
-      }
-
-
     /* chat_list */
     #chat_list {
       width: 100%;
-      display: flex;
-      flex-direction: column;
       overflow-y: auto;
     }
-      .chat {
-        padding: 8px 10px;
-      }
 
       .grey {
         background-color: rgb(238, 238, 238);
       }
 
       .chat > a{
-        display: flex;
         width: 100%;
       }
 
@@ -145,14 +140,11 @@ a {
         }
 
         .data_chat {
-          display: flex;
-          flex-direction: column;
           width: 90%;
           margin-left: 4%;
         }
 
           .name_time_contact {
-            display: flex;
             justify-content: space-between;
             align-items: center;
           }
@@ -168,8 +160,6 @@ a {
             font-size: 12px;
           }
 
-
-
           .preview_msg {
             width: 75%;
             overflow: hidden;
@@ -181,27 +171,22 @@ a {
 
   /* main */
   main {
-    width: 65%;/* DEBUG:  */
+    width: 65%;
     position: fixed;
     top: 0;
     right: 0;
-    display: flex;
-    flex-direction: column;
   }
 
     /* chat_tools */
     #chat_tools {
-      display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       height: 60px;
-      padding: 10px;
       background-color: rgb(238, 238, 238);
     }
 
       #info_contact {
-        display: flex;
         align-items: center;
         width: 60%;
       }
@@ -214,7 +199,6 @@ a {
         }
 
       #tools_this_chat {
-        display: flex;
         justify-content: flex-end;
         width: 40%;
       }
@@ -250,7 +234,6 @@ a {
       position: fixed;
       bottom: 0;
       right: 0;
-      display: flex;
       justify-content: space-around;
       align-items: center;
       padding: 10px;
@@ -264,39 +247,20 @@ a {
         border-radius: 60px;
       }
 
-      #user_chat input:focus {
-        outline-color: transparent;
-        outline-style: none;
-      }
-
   /* template */
-  .msgsent::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
   .data_chat_now_sent {
     float: right;
     display: inline-block;
     border-radius: 8px;
-    padding: 10px;
     margin: 10px;
     background-color: rgb(220, 248, 198);
     text-align: right;
-  }
-
-  .msgreceived::after {
-    content: "";
-    display: table;
-    clear: both;
   }
 
   .data_chat_now_received {
     float: left;
     display: inline-block;
     border-radius: 8px;
-    padding: 10px;
     margin: 10px;
     background-color: white;
   }
