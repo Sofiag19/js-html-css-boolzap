@@ -12,7 +12,7 @@ $(document).ready(function(){
 
     $(".message").val("");
   }
-  
+
   // invio mess
   $(".sendmsg").click(function(){
     inviaMess();
@@ -38,7 +38,25 @@ $(document).ready(function(){
   });
 
   // input find da modificare al click
+  // $(input).click(function(){
+  //   $(this).placeholder scompare;
+  //   $(cerca).hide();
+  //   $(freccia).show;
+  // })
 
+  // modificare send con mex vocale
+  // if(input value == 0) {
+  //   $(send).hide();
+  // } else {
+  //   $(mexvocale).hide()
+  // }
 
+  // hover su msgsent e msgreceived appare freccina
+  // $(msgsent).hover(function(){
+  //   $(freccina).show();
+  // })
+  // $(msgreceived).hover(function(){
+  //   $(freccina).show();
+  // })
 
 });
