@@ -1,33 +1,22 @@
 $(document).ready(function(){
 
+  // invio mess
   $(".sendmsg").click(function(){
 
-  var messaggio = $(".message").val();
+    var messaggio = $(".message").val();
 
-  var elmentmsg = $("#template .msgsent").clone();
+    var elmentmsg = $("#template .msgsent").clone();
 
-  elmentmsg.find(".testo").text(messaggio);
+    elmentmsg.find(".testo").text(messaggio);
 
-  $("#now_chat").append(elmentmsg);
+    $("#now_chat").append(elmentmsg);
 
-  $(".message").val("");
+    $(".message").val("");
 
+  });
 
-  $(".chat").click(function(){
+  // al click il div cambia colore
 
-    $(this).css("background-color", "grey");
-    // $(this).siblings().css("background-color", "white");
+  // invio con invio
 
-  })
-
-  // $("#user_chat .message").click(function(){
-  //   $(this).blur();
-  // });
-
-
-
-
-
-
-});
 });
