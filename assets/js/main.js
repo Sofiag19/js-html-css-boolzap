@@ -13,7 +13,7 @@ $(document).ready(function(){
     $(".message").val("");
 
     setTimeout(function(){
-      var ricevuto = $(".msgreceived");
+      var ricevuto = $("#template .msgreceived").clone();
       ricevuto.find(".testo").text("ok");
       $("#now_chat").append(ricevuto);
     }, 1000);
