@@ -38,16 +38,16 @@ $(document).ready(function(){
   });
 
   // scompare placeholder da input mess
-  $("#writing").click(function(){
-    $(this).removeAttr("placeholder");
-  })
+  // $("#writing").click(function(){
+  //   $(this).removeAttr("placeholder");
+  // })
 
   // ricerca chat: scompare placeholder, lente e compare freccina
-  $("#find_chat div").click(function(){
-    $(this).children("#cerca").removeAttr("placeholder");
-    $(this).children("#lente").hide();
-    $(this).children("#return").show();
-  })
+  // $("#find_chat div").click(function(){
+  //   $(this).children("#cerca").removeAttr("placeholder");
+  //   $(this).children("#lente").hide();
+  //   $(this).children("#return").show();
+  // })
 
   // ricerca chat: ricompare placeholder, lente e scompare freccina
   // $("#return").click(function(){
