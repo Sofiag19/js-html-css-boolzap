@@ -30,11 +30,19 @@ $(document).ready(function(){
     $(".name").each(function(){
       var nome = $(this).text();
       // console.log(nome);
-      if (ricerca != nome ) {
+      if (nome.includes(ricerca) == false) {
         $(this).parents(".chat").hide();
       }
     });
+    if (ricerca == 0) {
+      $("#cerca").removeAttr("value");
+    }
   });
+
+
+
+
+
 
 
 
