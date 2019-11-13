@@ -85,16 +85,23 @@ a {
       color: rgb(118, 220, 255);
     }
 
+    #notification div:last-of-type {
+    }
+
     #notification div:last-of-type h6 {
+      width: 349px;
       font-size: 17px;
       font-weight: normal;
       color: #262626;
+      text-overflow: ellipsis;
     }
 
     #notification div:last-of-type a {
+      width: 349px;
       color: rgba(0,0,0,.6);
       font-size: 14px;
       text-decoration: underline;
+      text-overflow: ellipsis;
     }
 
     /* find_chat */
@@ -189,7 +196,7 @@ a {
   }
 
     /* chat_tools */
-    #chat_tools {
+    #header_chat {
       justify-content: space-between;
       align-items: center;
       width: 100%;
@@ -235,11 +242,11 @@ a {
       height: calc(100vh - 120px);
       background-color: rgb(229, 221, 213);
       background-image: url("../img/sfondodefault.png");
-      overflow: auto;
+      overflow-y: auto;
     }
 
     /* user_chat */
-    #user_chat {
+    #footer_chat {
       width: 65%;
       height: 60px;
       position: fixed;
@@ -251,25 +258,31 @@ a {
       background-color: rgb(248, 248, 248);
     }
 
-      #user_chat input {
+      #writing {
         width: 80%;
         border: 0;
         padding: 15px 10px;
         border-radius: 60px;
       }
 
-      #invia {
+      #mexvocale {
         display: none;
       }
 
   /* template */
+  #template {
+    display: none;
+  }
+
   .data_chat_now_sent {
     float: right;
     display: inline-block;
     border-radius: 8px;
     margin: 10px;
     background-color: rgb(220, 248, 198);
-    text-align: right;
+    position: relative;
+    max-width: 60%;
+    word-wrap: break-word;
   }
 
   .data_chat_now_received {
@@ -278,6 +291,9 @@ a {
     border-radius: 8px;
     margin: 10px;
     background-color: white;
+    position: relative;
+    max-width: 60%;
+    word-wrap: break-word;
   }
 
   .testo {
@@ -287,4 +303,7 @@ a {
   .time {
     font-size: 11px;
     color: rgba(0,0,0,.45);
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
   }

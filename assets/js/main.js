@@ -37,19 +37,19 @@ $(document).ready(function(){
     }
   });
 
-  // input find da modificare al click
-  // $(input).click(function(){
-  //   $(this).placeholder scompare;
-  //   $(cerca).hide();
-  //   $(freccia).show;
-  // })
+  // scompare placeholder da input mess
+  $("#writing").click(function(){
+    $(this).removeAttr("placeholder");
+  })
 
+  // ricerca chat: scompare placeholder, lente e compare freccina
   $("#find_chat div").click(function(){
     $(this).children("#cerca").removeAttr("placeholder");
     $(this).children("#lente").hide();
     $(this).children("#return").show();
   })
 
+  // ricerca chat: ricompare placeholder, lente e scompare freccina
   // $("#return").click(function(){
   //   $(this).hide();
   //   $(this).siblings("#cerca").attr("placeholder","Cerca o inizia una nuova chat");
