@@ -1,17 +1,15 @@
 $(document).ready(function(){
 
-  // funzione per invio mess
+  // funzione per invio mess e risposta
   function inviaMess() {
     var messaggio = $(".message").val();
-
+    console.log(messaggio);
     var elmentmsg = $("#template .msgsent").clone();
-
     elmentmsg.find(".testo").text(messaggio);
-
     $("#now_chat").append(elmentmsg);
-
     $(".message").val("");
 
+    // sullo step 1 sarà fondamentalmente la stessa logica usata per creare il msg utente, ma il blocco avrà caratteristiche grafiche diverse e verrà fuori solo dopo 1secondo che è uscito il messaggio utente(quello verde);
     setTimeout(function(){
       var ricevuto = $("#template .msgreceived").clone();
       ricevuto.find(".testo").text("ok");
@@ -23,6 +21,24 @@ $(document).ready(function(){
   $(".sendmsg").click(function(){
     inviaMess();
   });
+
+  // sullo step 2 si tratterà di gestire una funzione di callback, scatenata da evento di digitazione da tastiera sul input di ricerca. Da li dovrò fare un check su ogni singolo nome contenuto su ogni singolo blocco di contatto, quindi un ciclo su tutti i blocchi contatto presenti in pagina (e qui quindi mi servirà l’“each()“), e per il check essendo su stringhe, mi ricordo che alcuni metodi js che erano per gli array, son presenti anche per le stringhe, come per es. l’“includes()“.
+
+
+  $("#cerca").keypress(function(){
+    var ricerca = $("#cerca").val();
+    var ricerca1 = $("#cerca").text(ricerca);
+    console.log(ricerca1);
+    $(".name").each(function(){
+      var nome = $(this).text();
+      // console.log(nome);
+      if (ricerca1 != nome ) {
+        $(this).parents(".chat").hide();
+      }
+    });
+  });
+
+
 
   // inviomsg con invio - "13"
   $(".message").on('keypress',function(e) {
@@ -42,7 +58,6 @@ $(document).ready(function(){
       $(this).siblings().removeClass("lightgrey");
     }
   });
-
 
 
 
