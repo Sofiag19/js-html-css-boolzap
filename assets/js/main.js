@@ -27,12 +27,10 @@ $(document).ready(function(){
 
   $("#cerca").keypress(function(){
     var ricerca = $("#cerca").val();
-    var ricerca1 = $("#cerca").text(ricerca);
-    console.log(ricerca1);
     $(".name").each(function(){
       var nome = $(this).text();
       // console.log(nome);
-      if (ricerca1 != nome ) {
+      if (ricerca != nome ) {
         $(this).parents(".chat").hide();
       }
     });
