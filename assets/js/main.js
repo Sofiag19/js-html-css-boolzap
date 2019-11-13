@@ -11,6 +11,12 @@ $(document).ready(function(){
     $("#now_chat").append(elmentmsg);
 
     $(".message").val("");
+
+    setTimeout(function(){
+      var ricevuto = $(".msgreceived");
+      ricevuto.find(".testo").text("ok");
+      $("#now_chat").append(ricevuto);
+    }, 1000);
   }
 
   // invio mess
@@ -36,6 +42,11 @@ $(document).ready(function(){
       $(this).siblings().removeClass("lightgrey");
     }
   });
+
+
+
+
+
 
   // scompare placeholder da input mess
   // $("#writing").click(function(){
