@@ -8,8 +8,6 @@ $(document).ready(function(){
     elmentmsg.find(".testo").text(messaggio);
     $("#now_chat").append(elmentmsg);
     $(".message").val("");
-
-    // sullo step 1 sarà fondamentalmente la stessa logica usata per creare il msg utente, ma il blocco avrà caratteristiche grafiche diverse e verrà fuori solo dopo 1secondo che è uscito il messaggio utente(quello verde);
     setTimeout(function(){
       var ricevuto = $("#template .msgreceived").clone();
       ricevuto.find(".testo").text("ok");
@@ -22,31 +20,27 @@ $(document).ready(function(){
     inviaMess();
   });
 
-  // sullo step 2 si tratterà di gestire una funzione di callback, scatenata da evento di digitazione da tastiera sul input di ricerca. Da li dovrò fare un check su ogni singolo nome contenuto su ogni singolo blocco di contatto, quindi un ciclo su tutti i blocchi contatto presenti in pagina (e qui quindi mi servirà l’“each()“), e per il check essendo su stringhe, mi ricordo che alcuni metodi js che erano per gli array, son presenti anche per le stringhe, come per es. l’“includes()“.
-
-    $('#cerca').keyup(function(){
-      var ricerca = $(this).val().toLowerCase();
-        $('.name').each(function(){
-          var nome = $(this).text().toLowerCase();
-          if (!nome.indexOf(ricerca)) {
-            $(this).parents(".chat").show();
-          } else {
-            $(this).parents(".chat").hide();
-          }
-        });
-    });
-
-
-
-
-
-
-
   // inviomsg con invio - "13"
   $(".message").on('keypress',function(e) {
     if(e.which == 13) {
       inviaMess();
     }
+  });
+
+  // ricerca chat
+  $('#cerca').keyup(function(){
+    var ricerca = $(this).val().toLowerCase();
+      $('.name').each(function(){
+        var nome = $(this).text().toLowerCase();
+        if (nome.includes(ricerca)) {
+          $(this).parents(".chat").show();
+        } else {
+          $(this).parents(".chat").hide();
+        }
+      });
+      if (ricerca == "") {
+        $(".chat").show();
+      }
   });
 
   // al click e al passaggio la chat cambia colore
@@ -61,10 +55,7 @@ $(document).ready(function(){
     }
   });
 
-
-
-
-
+  // VARIE PROVE
   // scompare placeholder da input mess
   // $("#writing").click(function(){
   //   $(this).removeAttr("placeholder");
