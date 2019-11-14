@@ -2,16 +2,17 @@ $(document).ready(function(){
 
   // funzione per invio mess e risposta
   function inviaMess() {
+
     var messaggio = $(".message").val();
-    console.log(messaggio);
     var elmentmsg = $("#template .msgsent").clone();
     elmentmsg.find(".testo").text(messaggio);
     $(".now_chat").append(elmentmsg);
     $(".message").val("");
+
     setTimeout(function(){
       var ricevuto = $("#template .msgreceived").clone();
       ricevuto.find(".testo").text("ok");
-      $("#now_chat").append(ricevuto);
+      $(".now_chat").append(ricevuto);
     }, 1000);
   }
 
@@ -48,6 +49,18 @@ $(document).ready(function(){
     click: function() {
       $(this).addClass("grey");
       $(this).siblings().removeClass("grey");
+
+      var nomeContatto = $(this).find(".name").text().toLowerCase();
+      console.log(nomeContatto);
+      $(".contact_now h2").each(function(){
+        var nomeChat = $(this).text().toLowerCase();
+        if (nomeChat == nomeContatto) {
+          $(this).parents(".chat_showed").show();
+        } else {
+          $(this).parents(".chat_showed").hide();
+        }
+      })
+
     },
     mouseover: function(){
       $(this).not(".grey").addClass("lightgrey");
