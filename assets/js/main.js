@@ -44,18 +44,20 @@ $(document).ready(function(){
       }
   });
 
-  // al click e al passaggio la chat cambia colore
+  // al click e al passaggio la chat cambia colore e al click seleziono la chat che voglio
   $(".chat").on({
     click: function() {
       $(this).addClass("grey");
       $(this).siblings().removeClass("grey");
 
+      // al click di un contatto di apre la relativa chat
       var nomeContatto = $(this).find(".name").text().toLowerCase();
       console.log(nomeContatto);
       $(".contact_now h2").each(function(){
         var nomeChat = $(this).text().toLowerCase();
         if (nomeChat == nomeContatto) {
           $(this).parents(".chat_showed").show();
+
         } else {
           $(this).parents(".chat_showed").hide();
         }
@@ -68,10 +70,16 @@ $(document).ready(function(){
     }
   });
 
-  // al click di un contatto di apre la relativa chat
 
 
   // al click su un messaggio si apre un minidropdown
+  $(".now_chat").on("click",".arrow", function(){
+    $(this).siblings(".mini_drop").toggle();
+  });
+
+  $(".now_chat").on("click",".canc_mess",function() {
+    $(this).parents(".icona").hide();
+  });
 
   // VARIE PROVE
   // scompare placeholder da input mess

@@ -300,6 +300,51 @@ a {
     color: #262626;
   }
 
+  .arrow {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+
+  .arrow .fa-angle-down {
+    color: rgba(38, 38, 38, 0.23);
+    font-size: 20px;
+  }
+
+  .data_chat_now_sent:hover .arrow,
+  .data_chat_now_received:hover .arrow {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .mini_drop {
+    display: none;
+    position: absolute;
+    top: 35px;
+    width: 150px;
+    height: 70px;
+    padding: 10px;
+    line-height: 23px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+  }
+
+  .mini_drop a {
+    color: #262626;
+  }
+
+  .data_chat_now_sent .mini_drop {
+    right: 10px;
+  }
+
+  .data_chat_now_received .mini_drop {
+    left: 10px;
+  }
+
   .time {
     font-size: 11px;
     color: rgba(0,0,0,.45);
