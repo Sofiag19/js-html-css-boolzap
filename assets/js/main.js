@@ -6,7 +6,7 @@ $(document).ready(function(){
     console.log(messaggio);
     var elmentmsg = $("#template .msgsent").clone();
     elmentmsg.find(".testo").text(messaggio);
-    $("#now_chat").append(elmentmsg);
+    $(".now_chat").append(elmentmsg);
     $(".message").val("");
     setTimeout(function(){
       var ricevuto = $("#template .msgreceived").clone();
@@ -54,6 +54,11 @@ $(document).ready(function(){
       $(this).siblings().removeClass("lightgrey");
     }
   });
+
+  // al click di un contatto di apre la relativa chat
+
+
+  // al click su un messaggio si apre un minidropdown
 
   // VARIE PROVE
   // scompare placeholder da input mess

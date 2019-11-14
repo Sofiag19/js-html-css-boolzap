@@ -196,7 +196,7 @@ a {
   }
 
     /* chat_tools */
-    #header_chat {
+    .header_chat {
       justify-content: space-between;
       align-items: center;
       width: 100%;
@@ -204,40 +204,40 @@ a {
       background-color: rgb(238, 238, 238);
     }
 
-      #info_contact {
+      .info_contact {
         align-items: center;
         width: 60%;
       }
-        #info_contact div {
+        .info_contact div {
           margin-right: 5%;
         }
-        #info_contact div img {
+        .info_contact div img {
           width: 40px;
           border-radius: 50%;
         }
 
-      #tools_this_chat {
+      .tools_this_chat {
         justify-content: flex-end;
         width: 40%;
       }
 
-      #tools_this_chat div {
+      .tools_this_chat div {
         margin-left: 10%;
       }
 
-      #contact_now h2 {
+      .contact_now h2 {
         font-size: 17px;
         font-weight: normal;
         color: #262626;
       }
 
-      #contact_now p {
+      .contact_now p {
         color: rgba(0,0,0,.6);
         font-size: 14px;
       }
 
     /* now_chat */
-    #now_chat {
+    .now_chat {
       width: 100%;
       height: calc(100vh - 120px);
       background-color: rgb(229, 221, 213);
