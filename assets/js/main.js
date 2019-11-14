@@ -43,7 +43,6 @@ $(document).ready(function(){
             $(this).removeClass("play");
           }
         })
-
     },
 
     mouseover: function(){
