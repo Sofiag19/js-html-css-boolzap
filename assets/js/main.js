@@ -11,7 +11,6 @@ $(document).ready(function(){
       where.append(elmentmsg);
       where.scrollTop(10000);
     }
-    // scrolltop
     $(".message").val("");
 
     setTimeout(function(){
@@ -28,20 +27,23 @@ $(document).ready(function(){
     click: function() {
       $(this).addClass("grey");
       $(this).siblings().removeClass("grey");
+
       // al click di un contatto di apre la relativa chat
-      var nomeContatto = $(this).find(".name").text().toLowerCase();
-      console.log(nomeContatto);
-      $(".contact_now h2").each(function(){
-        var nomeChat = $(this).text().toLowerCase();
-        console.log(nomeChat);
-        if (nomeChat == nomeContatto) {
-          $(this).parents(".chat_showed").show();
-          $(".now_chat").addClass("play");
-        } else {
-          $(this).parents(".chat_showed").hide();
-          $(".now_chat").removeClass("play");
-        }
-      })
+      var indirizzoImg = $(this).find(".contact_img").attr("src");
+      var stileImg = $(this).find(".contact_img").attr("style");
+      $(".image").attr("src", indirizzoImg).attr("style",stileImg);
+      var nomeContatto = $(this).find(".name").text();
+      $(".name_now_contact").text(nomeContatto);
+      var numChat = $(this).attr("num-chat");
+        $(".now_chat").each(function(){
+          var numChatWrite = $(this).attr("num-chat");
+          if (numChat == numChatWrite) {
+            $(this).addClass("play");
+          } else {
+            $(this).removeClass("play");
+          }
+        })
+
     },
 
     mouseover: function(){

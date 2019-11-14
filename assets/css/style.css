@@ -152,7 +152,7 @@ a {
         width: 100%;
       }
 
-        .contact_img img{
+        .contact_img{
           border-radius: 50%;
           width: 50px;
         }
@@ -238,11 +238,16 @@ a {
 
     /* now_chat */
     .now_chat {
+      display: none;
       width: 100%;
       height: calc(100vh - 120px);
       background-color: rgb(229, 221, 213);
       background-image: url("../img/sfondodefault.png");
       overflow-y: auto;
+    }
+
+    .play {
+      display: block;
     }
 
     /* user_chat */
