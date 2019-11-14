@@ -4,17 +4,52 @@ $(document).ready(function(){
   function inviaMess() {
 
     var messaggio = $(".message").val();
-    var elmentmsg = $("#template .msgsent").clone();
-    elmentmsg.find(".testo").text(messaggio);
-    $(".now_chat").append(elmentmsg);
+    if (messaggio) {
+      var elmentmsg = $("#template .msgsent").clone();
+      elmentmsg.find(".testo").text(messaggio);
+      var where = $(".now_chat.play");
+      where.append(elmentmsg);
+      where.scrollTop(10000);
+    }
+    // scrolltop
     $(".message").val("");
 
     setTimeout(function(){
       var ricevuto = $("#template .msgreceived").clone();
       ricevuto.find(".testo").text("ok");
-      $(".now_chat").append(ricevuto);
+      where.append(ricevuto);
+      where.scrollTop(10000);
     }, 1000);
   }
+
+
+  // al click e al passaggio la chat cambia colore e al click seleziono la chat che voglio
+  $(".chat").on({
+    click: function() {
+      $(this).addClass("grey");
+      $(this).siblings().removeClass("grey");
+      // al click di un contatto di apre la relativa chat
+      var nomeContatto = $(this).find(".name").text().toLowerCase();
+      console.log(nomeContatto);
+      $(".contact_now h2").each(function(){
+        var nomeChat = $(this).text().toLowerCase();
+        console.log(nomeChat);
+        if (nomeChat == nomeContatto) {
+          $(this).parents(".chat_showed").show();
+          $(".now_chat").addClass("play");
+        } else {
+          $(this).parents(".chat_showed").hide();
+          $(".now_chat").removeClass("play");
+        }
+      })
+    },
+
+    mouseover: function(){
+      $(this).not(".grey").addClass("lightgrey");
+      $(this).siblings().removeClass("lightgrey");
+    }
+  });
+
 
   // invio mess
   $(".sendmsg").click(function(){
@@ -28,48 +63,22 @@ $(document).ready(function(){
     }
   });
 
+
   // ricerca chat
   $('#cerca').keyup(function(){
     var ricerca = $(this).val().toLowerCase();
-      $('.name').each(function(){
-        var nome = $(this).text().toLowerCase();
-        if (nome.includes(ricerca)) {
-          $(this).parents(".chat").show();
-        } else {
-          $(this).parents(".chat").hide();
-        }
-      });
-      if (ricerca == "") {
-        $(".chat").show();
+    $('.name').each(function(){
+      var nome = $(this).text().toLowerCase();
+      if (nome.includes(ricerca)) {
+        $(this).parents(".chat").show();
+      } else {
+        $(this).parents(".chat").hide();
       }
-  });
-
-  // al click e al passaggio la chat cambia colore e al click seleziono la chat che voglio
-  $(".chat").on({
-    click: function() {
-      $(this).addClass("grey");
-      $(this).siblings().removeClass("grey");
-
-      // al click di un contatto di apre la relativa chat
-      var nomeContatto = $(this).find(".name").text().toLowerCase();
-      console.log(nomeContatto);
-      $(".contact_now h2").each(function(){
-        var nomeChat = $(this).text().toLowerCase();
-        if (nomeChat == nomeContatto) {
-          $(this).parents(".chat_showed").show();
-
-        } else {
-          $(this).parents(".chat_showed").hide();
-        }
-      })
-
-    },
-    mouseover: function(){
-      $(this).not(".grey").addClass("lightgrey");
-      $(this).siblings().removeClass("lightgrey");
+    });
+    if (ricerca == "") {
+      $(".chat").show();
     }
   });
-
 
 
   // al click su un messaggio si apre un minidropdown
@@ -81,46 +90,5 @@ $(document).ready(function(){
     $(this).parents(".icona").hide();
   });
 
-  // VARIE PROVE
-  // scompare placeholder da input mess
-  // $("#writing").click(function(){
-  //   $(this).removeAttr("placeholder");
-  // })
 
-  // ricerca chat: scompare placeholder, lente e compare freccina
-  // $("#find_chat div").click(function(){
-  //   $(this).children("#cerca").removeAttr("placeholder");
-  //   $(this).children("#lente").hide();
-  //   $(this).children("#return").show();
-  // })
-
-  // ricerca chat: ricompare placeholder, lente e scompare freccina
-  // $("#return").click(function(){
-  //   $(this).hide();
-  //   $(this).siblings("#cerca").attr("placeholder","Cerca o inizia una nuova chat");
-  //   $(this).siblings("#lente").show();
-  // })
-
-  // -=====modificare send con mex vocale=========
-  // if(input value == 0) {
-  //   $(send).hide();
-  // } else {
-  //   $(mexvocale).hide()
-  // }
-    // $("#writing").click(function(){
-    //   var valueWriting = $("#writing:text").attr("text");
-    //   if (valueWriting > 0) {
-    //     $("#invia").show();
-    //     $("#mexvocale").hide();
-    //   }
-    // })
-
-  // hover su msgsent e msgreceived appare freccina
-  // $(msgsent).hover(function(){
-  //   $(freccina).show();
-  // })
-  // $(msgreceived).hover(function(){
-  //   $(freccina).show();
-  // })
-
-});
+}); //chiusura document ready
