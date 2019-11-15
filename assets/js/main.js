@@ -4,6 +4,7 @@ $(document).ready(function(){
   function inviaMess() {
 
     var messaggio = $(".message").val();
+
     if (messaggio) {
       var elmentmsg = $("#template .msgsent").clone();
       elmentmsg.find(".testo").text(messaggio);
@@ -84,7 +85,6 @@ $(document).ready(function(){
     }
   });
 
-
   // al click su un messaggio si apre un minidropdown
   $(".now_chat").on("click",".arrow", function(){
       $(this).siblings(".mini_drop").toggle();
@@ -93,5 +93,11 @@ $(document).ready(function(){
   $(".now_chat").on("click",".canc_mess",function() {
     $(this).parents(".icona").hide();
   });
+
+  // TODO:  modifica input ricerca
+  // TODO:  modifica input Messaggio
+  // TODO:  controllo che se apro un mini drop gli altri si devono chiudere
+  // TODO: orario
+
 
 }); //chiusura document ready
