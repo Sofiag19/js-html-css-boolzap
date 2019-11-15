@@ -102,9 +102,31 @@ $(document).ready(function(){
     $(this).parents(".icona").hide();
   });
 
-  // usare Handlebars
   // TODO:  modifica input ricerca
+  $("#cerca").click(function(){
+    $(this).removeAttr("placeholder");
+    $("#lente").hide();
+    $("#return").show();
+  })
+
+  $("#return").click(function(){
+    $(this).hide();
+    $("#lente").show();
+    $("#cerca").attr("placeholder","Cerca o inizia una nuova chat");
+  })
+
   // TODO:  modifica input Messaggio
+  // $("#writing").click(function(){
+  //   $(this).removeAttr("placeholder");
+  //   $("#mexvocale").hide();
+  //   $("#invia").show();
+  // })
+  //
+  // $("body").not("#writing").click(function(){
+  //   $("#writing").attr("placeholder","Scrivi un messaggio");
+  //   $("#mexvocale").show();
+  //   $("#invia").hide();
+  // })
   // TODO:  controllo che se apro un mini drop gli altri si devono chiudere
   // TODO: orario
 
