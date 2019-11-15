@@ -54,7 +54,7 @@
       </div>
       <!-- chat-list -->
       <div id="chat_list">
-        <div class="chat pad10" num-chat = "1">
+        <div class="chat pad10 play" num-chat = "1">
           <a href="#" class="flex">
             <div>
               <img class="contact_img" src="assets/img/user1.svg" alt="immagine contatto" style="background-color: blue;">
@@ -78,7 +78,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Lucia</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -94,7 +94,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Anna</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -110,7 +110,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Sara</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -126,7 +126,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Federico</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -142,7 +142,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Mario</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -158,7 +158,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Giovanna</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -174,7 +174,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Alessandro</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -190,7 +190,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Paolo</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -206,7 +206,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Gabriele</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -222,7 +222,7 @@
             <div class="data_chat">
               <div class="name_time_contact flex">
                 <h5 class="name">Emanuela</h5>
-                <p>hh:mm</p>
+                <p class="time_chat">hh:mm</p>
               </div>
               <div class="preview_msg">
                 <p>preview chat bla bla bla</p>
@@ -358,7 +358,7 @@
               </div>
             </div>
           </a>
-          <sub class="time">hh:mm</sub>
+          <sub class="time">{{timemsg}}</sub>
         </div>
     </script>
     <script id="hd-template_received" type="text/x-handlebars-template">
@@ -377,7 +377,7 @@
               </div>
             </div>
           </a>
-          <span class="time">hh:mm</span>
+          <span class="time">{{timemsg}}</span>
         </div>
       </div>
     </div>

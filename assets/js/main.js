@@ -10,7 +10,7 @@ $(document).ready(function(){
       // elmentmsg.find(".testo").text(messaggio);
       var copiaTemplSend = $("#hd-template_sent").html();
       var templReadySend = Handlebars.compile(copiaTemplSend);
-      var createObjSend = {text : messaggio};
+      var createObjSend = {text : messaggio, timemsg : this_time()};
       var createElSend = templReadySend(createObjSend);
       var where = $(".now_chat.play");
       where.append(createElSend);
@@ -32,7 +32,7 @@ $(document).ready(function(){
       // ricevuto.find(".testo").text("ok");
       var copiaTemplRic = $("#hd-template_received").html();
       var templReadyRic = Handlebars.compile(copiaTemplRic);
-      var createObjRic = {text : "ok"};
+      var createObjRic = {text : "ok", timemsg : this_time()};
       var createElRic = templReadyRic(createObjRic);
       where.append(createElRic);
       // scroll pagina
@@ -47,7 +47,8 @@ $(document).ready(function(){
     click: function() {
       $(this).addClass("grey");
       $(this).siblings().removeClass("grey");
-
+      $(".chat").removeClass("play");
+      $(this).addClass("play");
       // al click di un contatto di apre la relativa chat
       // modifica img contatto
       var indirizzoImg = $(this).find(".contact_img").attr("src");
@@ -148,6 +149,20 @@ $(document).ready(function(){
   // TODO: mess sta scrivendo
 
   // TODO: orario
+  function this_time() {
+   var d = new Date();
+   var m = d.getMinutes();
+   var h = d.getHours();
 
+   if (m < 10) {
+     m = "0" + m;
+   };
+   if (h < 10) {
+     h = "0" + h;
+   }
+   return h + ":" + m;
+  };
+
+  // aggiornare chat con ultimo mess e orario
 
 }); //chiusura document ready
