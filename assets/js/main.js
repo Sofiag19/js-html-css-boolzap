@@ -6,18 +6,26 @@ $(document).ready(function(){
     var messaggio = $(".message").val();
 
     if (messaggio) {
-      var elmentmsg = $("#template .msgsent").clone();
-      elmentmsg.find(".testo").text(messaggio);
+      // var elmentmsg = $("#template .msgsent").clone();
+      // elmentmsg.find(".testo").text(messaggio);
+      var copiaTemplSend = $("#hd-template_sent").html();
+      var templReadySend = Handlebars.compile(copiaTemplSend);
+      var createObjSend = {text : messaggio};
+      var createElSend = templReadySend(createObjSend);
       var where = $(".now_chat.play");
-      where.append(elmentmsg);
+      where.append(createElSend);
       where.scrollTop(10000);
     }
     $(".message").val("");
 
     setTimeout(function(){
-      var ricevuto = $("#template .msgreceived").clone();
-      ricevuto.find(".testo").text("ok");
-      where.append(ricevuto);
+      // var ricevuto = $("#template .msgreceived").clone();
+      // ricevuto.find(".testo").text("ok");
+      var copiaTemplRic = $("#hd-template_received").html();
+      var templReadyRic = Handlebars.compile(copiaTemplRic);
+      var createObjRic = {text : "ok"};
+      var createElRic = templReadyRic(createObjRic);
+      where.append(createElRic);
       where.scrollTop(10000);
     }, 1000);
   }

@@ -301,11 +301,51 @@
       </div>
     </main>
 
-    <!-- template -->
-    <div id="template">
+    <!-- template html -->
+            <!-- <div id="template">
+              <div class="msgsent clear icona">
+                <div class="data_chat_now_sent pad10">
+                  <span class="testo"></span>
+                  <span>&emsp;&emsp;</span>
+                  <a class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                    <div class="mini_drop">
+                      <div class="info_mess">
+                        <a href="#">Info messaggio</a>
+                      </div>
+                      <div class="canc_mess">
+                        <a href="#">Cancella Messaggio</a>
+                      </div>
+                    </div>
+                  </a>
+                  <sub class="time">hh:mm</sub>
+                </div>
+              </div>
+              <div class="msgreceived clear icona">
+                <div class="data_chat_now_received pad10">
+                  <span class="testo"></span>
+                  <span>&emsp;&emsp;&emsp;</span>
+                  <a class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                    <div class="mini_drop">
+                      <div class="info_mess">
+                        <a href="#">Info messaggio</a>
+                      </div>
+                      <div class="canc_mess">
+                        <a href="#">Cancella Messaggio</a>
+                      </div>
+                    </div>
+                  </a>
+                  <span class="time">hh:mm</span>
+                </div>
+              </div>
+            </div> -->
+
+    <!-- templates handlebar -->
+    <script id="hd-template_sent" type="text/x-handlebars-template">
       <div class="msgsent clear icona">
         <div class="data_chat_now_sent pad10">
-          <span class="testo"></span>
+          <span class="testo">{{text}}</span>
           <span>&emsp;&emsp;</span>
           <a class="arrow">
             <i class="fas fa-angle-down"></i>
@@ -320,10 +360,11 @@
           </a>
           <sub class="time">hh:mm</sub>
         </div>
-      </div>
+    </script>
+    <script id="hd-template_received" type="text/x-handlebars-template">
       <div class="msgreceived clear icona">
         <div class="data_chat_now_received pad10">
-          <span class="testo"></span>
+          <span class="testo">{{text}}</span>
           <span>&emsp;&emsp;&emsp;</span>
           <a class="arrow">
             <i class="fas fa-angle-down"></i>
@@ -338,10 +379,11 @@
           </a>
           <span class="time">hh:mm</span>
         </div>
-      </div>
+      </div>      
     </div>
+    </script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript"src="assets/js/main.js"></script>
   </body>
