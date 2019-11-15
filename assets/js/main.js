@@ -19,6 +19,14 @@ $(document).ready(function(){
     }
     $(".message").val("");
 
+    var online = setTimeout(function(){
+      $(".last_access").text("online");
+    }, 200);
+    // clearTimeout(online);
+    var staScrivendo = setInterval(function(){
+      $(".last_access").text("Sta scrivendo...");
+    }, 600);
+    clearTimeout(staScrivendo);
     setTimeout(function(){
       // var ricevuto = $("#template .msgreceived").clone();
       // ricevuto.find(".testo").text("ok");
@@ -30,6 +38,7 @@ $(document).ready(function(){
       // scroll pagina
       where.scrollTop(10000);
     }, 1000);
+
   }
 
 
@@ -136,11 +145,8 @@ $(document).ready(function(){
     }
   })
 
-  // $(".now_chat").on("click",".mini_drop",function() {
-  //   $(".mini_drop").removeClass("active")
-  //   $(this).parents(".icona").removeClass("active");
-  //
-  // });
+  // TODO: mess sta scrivendo
+
   // TODO: orario
 
 
