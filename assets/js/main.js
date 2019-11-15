@@ -29,11 +29,14 @@ $(document).ready(function(){
       $(this).siblings().removeClass("grey");
 
       // al click di un contatto di apre la relativa chat
+      // modifica img contatto
       var indirizzoImg = $(this).find(".contact_img").attr("src");
       var stileImg = $(this).find(".contact_img").attr("style");
       $(".image").attr("src", indirizzoImg).attr("style",stileImg);
+      // modifica nome
       var nomeContatto = $(this).find(".name").text();
       $(".name_now_contact").text(nomeContatto);
+      // cambio chat
       var numChat = $(this).attr("num-chat");
         $(".now_chat").each(function(){
           var numChatWrite = $(this).attr("num-chat");
@@ -84,7 +87,7 @@ $(document).ready(function(){
 
   // al click su un messaggio si apre un minidropdown
   $(".now_chat").on("click",".arrow", function(){
-    $(this).siblings(".mini_drop").toggle();
+      $(this).siblings(".mini_drop").toggle();
   });
 
   $(".now_chat").on("click",".canc_mess",function() {
