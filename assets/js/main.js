@@ -14,6 +14,7 @@ $(document).ready(function(){
       var createElSend = templReadySend(createObjSend);
       var where = $(".now_chat.play");
       where.append(createElSend);
+      // scroll pagina
       where.scrollTop(10000);
     }
     $(".message").val("");
@@ -26,6 +27,7 @@ $(document).ready(function(){
       var createObjRic = {text : "ok"};
       var createElRic = templReadyRic(createObjRic);
       where.append(createElRic);
+      // scroll pagina
       where.scrollTop(10000);
     }, 1000);
   }
@@ -93,6 +95,7 @@ $(document).ready(function(){
     }
   });
 
+
   // al click su un messaggio si apre un minidropdown
   $(".now_chat").on("click",".arrow", function(){
       $(this).siblings(".mini_drop").toggle();
@@ -116,17 +119,21 @@ $(document).ready(function(){
   })
 
   // TODO:  modifica input Messaggio
-  // $("#writing").click(function(){
-  //   $(this).removeAttr("placeholder");
-  //   $("#mexvocale").hide();
-  //   $("#invia").show();
-  // })
-  //
-  // $("body").not("#writing").click(function(){
-  //   $("#writing").attr("placeholder","Scrivi un messaggio");
-  //   $("#mexvocale").show();
-  //   $("#invia").hide();
-  // })
+  $("#writing").keyup(function(){
+    var valWriting = $(this).val();
+    var lunghWriting = valWriting.length;
+    console.log(lunghWriting);
+    if (lunghWriting == 0) {
+      $("#writing").attr("placeholder","Scrivi un messaggio");
+      $("#mexvocale").show();
+      $("#invia").hide();
+    } else if (lunghWriting > 0) {
+      $("#writing").removeAttr("placeholder");
+      $("#mexvocale").hide();
+      $("#invia").show();
+    }
+  })
+
   // TODO:  controllo che se apro un mini drop gli altri si devono chiudere
   // TODO: orario
 
