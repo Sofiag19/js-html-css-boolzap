@@ -98,14 +98,16 @@ $(document).ready(function(){
 
   // al click su un messaggio si apre un minidropdown
   $(".now_chat").on("click",".arrow", function(){
-      $(this).siblings(".mini_drop").toggle();
+    // controllo che se apro un mini drop gli altri si devono chiudere
+    $(".mini_drop").hide();
+    $(this).siblings(".mini_drop").toggle();
   });
 
   $(".now_chat").on("click",".canc_mess",function() {
     $(this).parents(".icona").hide();
   });
 
-  // TODO:  modifica input ricerca
+  // modifica input ricerca
   $("#cerca").click(function(){
     $(this).removeAttr("placeholder");
     $("#lente").hide();
@@ -118,7 +120,7 @@ $(document).ready(function(){
     $("#cerca").attr("placeholder","Cerca o inizia una nuova chat");
   })
 
-  // TODO:  modifica input Messaggio
+  // modifica input Messaggio
   $("#writing").keyup(function(){
     var valWriting = $(this).val();
     var lunghWriting = valWriting.length;
@@ -134,7 +136,11 @@ $(document).ready(function(){
     }
   })
 
-  // TODO:  controllo che se apro un mini drop gli altri si devono chiudere
+  // $(".now_chat").on("click",".mini_drop",function() {
+  //   $(".mini_drop").removeClass("active")
+  //   $(this).parents(".icona").removeClass("active");
+  //
+  // });
   // TODO: orario
 
 
