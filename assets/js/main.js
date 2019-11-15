@@ -94,6 +94,7 @@ $(document).ready(function(){
     $(this).parents(".icona").hide();
   });
 
+  // usare Handlebars
   // TODO:  modifica input ricerca
   // TODO:  modifica input Messaggio
   // TODO:  controllo che se apro un mini drop gli altri si devono chiudere
