@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- left-part -->
+    <div id="left_part" class="flex fl_col">
+      <!-- user-tools -->
+      <div id="user_tools" class="flex pad10">
+        <div id="user_img">
+          <a href="#">
+            <img src="assets\img\user1.svg" alt="immagine profilo" style="background-color: red;">
+          </a>
+        </div>
+        <div id="tools" class="flex">
+          <a href="">
+            <svg id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#727A7E" d="M12.072 1.761a10.05 10.05 0 0 0-9.303 5.65.977.977 0 0 0 1.756.855 8.098 8.098 0 0 1 7.496-4.553.977.977 0 1 0 .051-1.952zM1.926 13.64a10.052 10.052 0 0 0 7.461 7.925.977.977 0 0 0 .471-1.895 8.097 8.097 0 0 1-6.012-6.386.977.977 0 0 0-1.92.356zm13.729 7.454a10.053 10.053 0 0 0 6.201-8.946.976.976 0 1 0-1.951-.081v.014a8.097 8.097 0 0 1-4.997 7.209.977.977 0 0 0 .727 1.813l.02-.009z"></path><path fill="#009588" d="M19 1.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"></path></svg>
+          </a>
+          <a href="">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path opacity=".55" fill="#263238" d="M19.005 3.175H4.674C3.642 3.175 3 3.789 3 4.821V21.02l3.544-3.514h12.461c1.033 0 2.064-1.06 2.064-2.093V4.821c-.001-1.032-1.032-1.646-2.064-1.646zm-4.989 9.869H7.041V11.1h6.975v1.944zm3-4H7.041V7.1h9.975v1.944z"></path></svg>
+          </a>
+          <a href="">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".6" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <!-- notifiche -->
+      <div id="notification" class="flex pad10">
+        <div id="bell" class="pad10">
+          <i class="fas fa-bell-slash"></i>
+        </div>
+        <div class="flex fl_col">
+          <h6>Ricevi notifiche di nuovi messaggi</h6>
+          <a href="#">Attiva notifiche desktop</a>
+        </div>
+      </div>
+      <!-- find -->
+      <div id="find_chat" class="pad10">
+        <div class="flex">
+          <button id="lente" type="button" name="find_lente">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".3" d="M15.009 13.805h-.636l-.22-.219a5.184 5.184 0 0 0 1.256-3.386 5.207 5.207 0 1 0-5.207 5.208 5.183 5.183 0 0 0 3.385-1.255l.221.22v.635l4.004 3.999 1.194-1.195-3.997-4.007zm-4.808 0a3.605 3.605 0 1 1 0-7.21 3.605 3.605 0 0 1 0 7.21z"></path></svg>
+          </button>
+          <button id="return" type="button" name="return">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#4FC3F7" d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2z"></path></svg>
+          </button>
+          <input id="cerca" type="text" name="find" placeholder="Cerca o inizia una nuova chat" class="nofocus">
+        </div>
+      </div>
+      <!-- chat-list -->
+      <div id="chat_list">
+        <div class="chat pad10 play" num-chat = "1">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets/img/user1.svg" alt="immagine contatto" style="background-color: blue;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Michele</h5>
+                <p>hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "2">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: yellow;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Lucia</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "3">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: grey;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Anna</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "4">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: pink;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Sara</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "5">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: orange;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Federico</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "6">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: lightblue;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Mario</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "7">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: purple;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Giovanna</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "8">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: green;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Alessandro</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "9">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: lightgreen;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Paolo</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "10">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: gold;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Gabriele</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="chat pad10" num-chat = "11">
+          <a href="#" class="flex">
+            <div>
+              <img class="contact_img" src="assets\img\user1.svg" alt="immagine contatto" style="background-color: violet;">
+            </div>
+            <div class="data_chat">
+              <div class="name_time_contact flex">
+                <h5 class="name">Emanuela</h5>
+                <p class="time_chat">hh:mm</p>
+              </div>
+              <div class="preview_msg">
+                <p>preview chat bla bla bla</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- main-part -->
+    <main>
+      <div class="chat_showed">
+        <!-- chat-tools -->
+        <div class="header_chat flex pad10">
+          <a href="#" class="info_contact flex">
+            <div >
+              <img class="image" src="assets/img/user1.svg" alt="immagine contatto" style="background-color: blue;">
+            </div>
+            <div class="contact_now">
+              <h2 class="name_now_contact">Michele</h2>
+              <p class="last_access">ultimo accesso</p>
+            </div>
+          </a>
+          <div class="tools_this_chat flex">
+            <div>
+              <a href="#">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".5" d="M15.9 14.3H15l-.3-.3c1-1.1 1.6-2.7 1.6-4.3 0-3.7-3-6.7-6.7-6.7S3 6 3 9.7s3 6.7 6.7 6.7c1.6 0 3.2-.6 4.3-1.6l.3.3v.8l5.1 5.1 1.5-1.5-5-5.2zm-6.2 0c-2.6 0-4.6-2.1-4.6-4.6s2.1-4.6 4.6-4.6 4.6 2.1 4.6 4.6-2 4.6-4.6 4.6z"></path></svg>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".5" d="M1.816 15.556v.002c0 1.502.584 2.912 1.646 3.972s2.472 1.647 3.974 1.647a5.58 5.58 0 0 0 3.972-1.645l9.547-9.548c.769-.768 1.147-1.767 1.058-2.817-.079-.968-.548-1.927-1.319-2.698-1.594-1.592-4.068-1.711-5.517-.262l-7.916 7.915c-.881.881-.792 2.25.214 3.261.959.958 2.423 1.053 3.263.215l5.511-5.512c.28-.28.267-.722.053-.936l-.244-.244c-.191-.191-.567-.349-.957.04l-5.506 5.506c-.18.18-.635.127-.976-.214-.098-.097-.576-.613-.213-.973l7.915-7.917c.818-.817 2.267-.699 3.23.262.5.501.802 1.1.849 1.685.051.573-.156 1.111-.589 1.543l-9.547 9.549a3.97 3.97 0 0 1-2.829 1.171 3.975 3.975 0 0 1-2.83-1.173 3.973 3.973 0 0 1-1.172-2.828c0-1.071.415-2.076 1.172-2.83l7.209-7.211c.157-.157.264-.579.028-.814L11.5 4.36a.572.572 0 0 0-.834.018l-7.205 7.207a5.577 5.577 0 0 0-1.645 3.971z"></path></svg>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".6" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- now-chat -->
+        <div class="now_chat play" num-chat = "1"></div>
+        <div class="now_chat" num-chat = "2"></div>
+        <div class="now_chat" num-chat = "3"></div>
+        <div class="now_chat" num-chat = "4"></div>
+        <div class="now_chat" num-chat = "5"></div>
+        <div class="now_chat" num-chat = "6"></div>
+        <div class="now_chat" num-chat = "7"></div>
+        <div class="now_chat" num-chat = "8"></div>
+        <div class="now_chat" num-chat = "9"></div>
+        <div class="now_chat" num-chat = "10"></div>
+        <div class="now_chat" num-chat = "11"></div>
+      </div>
+      <!-- user-chat -->
+      <div id="footer_chat" class="flex">
+        <div>
+          <a href="#">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path opacity=".45" fill="#263238" d="M9.153 11.603c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962zm-3.204 1.362c-.026-.307-.131 5.218 6.063 5.551 6.066-.25 6.066-5.551 6.066-5.551-6.078 1.416-12.129 0-12.129 0zm11.363 1.108s-.669 1.959-5.051 1.959c-3.505 0-5.388-1.164-5.607-1.959 0 0 5.912 1.055 10.658 0zM11.804 1.011C5.609 1.011.978 6.033.978 12.228s4.826 10.761 11.021 10.761S23.02 18.423 23.02 12.228c.001-6.195-5.021-11.217-11.216-11.217zM12 21.354c-5.273 0-9.381-3.886-9.381-9.159s3.942-9.548 9.215-9.548 9.548 4.275 9.548 9.548c-.001 5.272-4.109 9.159-9.382 9.159zm3.108-9.751c.795 0 1.439-.879 1.439-1.962s-.644-1.962-1.439-1.962-1.439.879-1.439 1.962.644 1.962 1.439 1.962z"></path>
+            </svg>
+          </a>
+        </div>
+        <input id="writing" type="text" placeholder="Scrivi un messaggio" class="message nofocus">
+        <div id="mexvocale">
+          <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#263238" fill-opacity=".45" d="M11.999 14.942c2.001 0 3.531-1.53 3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531S8.469 2.35 8.469 4.35v7.061c0 2.001 1.53 3.531 3.53 3.531zm6.238-3.53c0 3.531-2.942 6.002-6.237 6.002s-6.237-2.471-6.237-6.002H3.761c0 4.001 3.178 7.297 7.061 7.885v3.884h2.354v-3.884c3.884-.588 7.061-3.884 7.061-7.885h-2z"></path></svg>
+        </div>
+        <div id="invia" class="sendmsg">
+          <a href="#">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="#263238" fill-opacity=".45" d="M1.101 21.757L23.8 12.028 1.101 2.3l.011 7.912 13.623 1.816-13.623 1.817-.011 7.912z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- template html -->
+            <!-- <div id="template">
+              <div class="msgsent clear icona">
+                <div class="data_chat_now_sent pad10">
+                  <span class="testo"></span>
+                  <span>&emsp;&emsp;</span>
+                  <a class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                    <div class="mini_drop">
+                      <div class="info_mess">
+                        <a href="#">Info messaggio</a>
+                      </div>
+                      <div class="canc_mess">
+                        <a href="#">Cancella Messaggio</a>
+                      </div>
+                    </div>
+                  </a>
+                  <sub class="time">hh:mm</sub>
+                </div>
+              </div>
+              <div class="msgreceived clear icona">
+                <div class="data_chat_now_received pad10">
+                  <span class="testo"></span>
+                  <span>&emsp;&emsp;&emsp;</span>
+                  <a class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                    <div class="mini_drop">
+                      <div class="info_mess">
+                        <a href="#">Info messaggio</a>
+                      </div>
+                      <div class="canc_mess">
+                        <a href="#">Cancella Messaggio</a>
+                      </div>
+                    </div>
+                  </a>
+                  <span class="time">hh:mm</span>
+                </div>
+              </div>
+            </div> -->
+
+    <!-- templates handlebar -->
+    <script id="hd-template_sent" type="text/x-handlebars-template">
+      <div class="msgsent clear icona">
+        <div class="data_chat_now_sent pad10">
+          <span class="testo">{{text}}</span>
+          <span>&emsp;&emsp;</span>
+          <a class="arrow">
+            <i class="fas fa-angle-down"></i>
+            <div class="mini_drop">
+              <div class="info_mess">
+                <a href="#">Info messaggio</a>
+              </div>
+              <div class="canc_mess">
+                <a href="#">Cancella Messaggio</a>
+              </div>
+            </div>
+          </a>
+          <sub class="time">{{timemsg}}</sub>
+        </div>
+    </script>
+    <script id="hd-template_received" type="text/x-handlebars-template">
+      <div class="msgreceived clear icona">
+        <div class="data_chat_now_received pad10">
+          <span class="testo">{{text}}</span>
+          <span>&emsp;&emsp;&emsp;</span>
+          <a class="arrow">
+            <i class="fas fa-angle-down"></i>
+            <div class="mini_drop">
+              <div class="info_mess">
+                <a href="#">Info messaggio</a>
+              </div>
+              <div class="canc_mess">
+                <a href="#">Cancella Messaggio</a>
+              </div>
+            </div>
+          </a>
+          <span class="time">{{timemsg}}</span>
+        </div>
+      </div>
+    </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"src="assets/js/main.js"></script>
+  </body>
+</html>
